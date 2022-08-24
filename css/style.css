@@ -1,0 +1,1876 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html{
+	padding: 0;
+	margin: 0;
+
+    width: 100%;
+    height: 100%;
+   
+    background: white;
+		scroll-behavior: smooth;
+
+	scroll-snap-type: y;
+  
+}
+
+
+/***
+#2E5266 blau
+#F1B96F gelb
+
+**/
+/***************Fonts ************/
+@font-face {
+    font-family: "Reforma_1918";
+    src:url("../font/reforma.1918-blanca.ttf");
+}
+@font-face {
+    font-family: "Reforma_1918_italic";
+    src:url("../font/reforma.1918-blanca-italica.ttf");
+}
+
+@font-face {
+    font-family: "Reforma_1918_negra";
+    src:url("../font/reforma.1918-negra.ttf");
+}
+
+
+h1,h2,h3,h4{
+	color: #424242;
+	   font-family: "Reforma_1918";
+}
+h1{
+	font-size: 4.5em;
+	color: white;
+}
+.h2-unterseite{
+	position: relative;
+	
+}
+.h1_startseite {
+	font-size: 2em!important;
+	position: absolute;
+	bottom: 20%;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+}
+.h1-unterseite{
+	color: #424242;
+	position: relative;
+	top: 10%;
+		text-align: center;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.h2_startseite{
+	text-align: right;
+	font-size: 4em;
+
+	position: absolute;
+	right: 10%;
+	top: 10%;
+	color: #F1B96F;
+	
+}
+
+.h2_startseite span{
+	background-color: rgba(66,66,66,.7);
+	
+}
+#unterseite_h1 h1{
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 4em;
+	width: 100%;
+}
+h2{
+	font-size: 35px;
+	position:relative;
+padding-top: 5%;
+right:0;
+
+text-align:center;
+	width: 80%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+h3{
+	text-align: center;
+	font-size: 25px;
+}
+
+h4{
+	font-size: 25px;
+	text-align: left;
+}
+
+a{
+	color: #424242;
+	  font-family: "Refomrma_1918";
+	font-size: 20px;
+	text-decoration: none;
+}
+.link{
+	color: #F1B96F;
+	  font-family: "Reforma_1918_negra";
+	font-size: 20px;
+	text-decoration: underline;
+	transition-duration: 0.5s;
+}
+
+.link:hover{
+	color: #424242;
+	  font-family: "Reforma_1918_negra";
+	font-size: 20px;
+	text-decoration:none;
+	transition-duration: 0.5s;
+}
+
+p{
+	color: #424242;
+	 font-family: "Refomrma_1918";
+	font-size: 20px;
+}
+
+
+/*********Button*******/
+.btn-container{
+	
+	width: 15%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+.button-prim{
+	background-color: #F1B96F!important;
+	color: #2E5266!important;
+	transition: 0.2s;
+}
+
+.button-sec{
+	background-color: #2E5266!important;
+	color: #F1B96F!important;
+	transition: 0.2s;
+}
+.button{
+	border: solid 2px #7C7C7C;
+		
+	padding: 10px;
+		transition: 0.2s;
+	display: flex;
+	color: white;
+   justify-content:center;
+}
+
+.button:hover{
+	color: #424242;
+	background-color:white;
+	
+	transition: 0.2s;
+}
+.button-prim:hover{
+	background-color: #2E5266!important;
+	color: #F1B96F!important;
+	transition: 0.2s;
+}
+
+.button-sec:hover{
+	background-color: #F1B96F!important;
+	color: #2E5266!important;
+	transition: 0.2s;
+}
+
+/**********Dauer CTA***********/
+.dauer_cta{
+	position: fixed;
+	background-color: rgba(241,185,111,1);
+bottom: 10%;
+	right: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	z-index: 20;
+	display: flex;
+	flex-direction: row;
+	
+	align-items: center;
+	transition-duration: .5s;
+}
+
+.dauer_cta:hover{
+	background-color: rgba(241,185,111,0.6);
+	transition-duration: .5s;
+}
+.dauer_cta img{
+margin-right: 10px;
+	height: 32px;
+	opacity: 0.6;
+}
+
+.dauer_cta p{
+	font-family: "Reforma_1918_negra";
+}
+
+
+/*************Hamburger Navigation************/
+#ham{
+	position: absolute;
+	width: 45px;
+  height: 45px;
+	display: none;
+margin-top: 50px;
+	right: 50px;
+	z-index: 100;
+	
+}
+#ham span{
+	position: absolute;
+	width: 100%;
+  height: 6px;
+  background-color: #424242;
+ 
+	border-radius: 3px;
+
+}
+#span1 {
+  top: 0px;
+	transform-origin: center;
+	transform: rotate(0deg);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
+
+}
+
+#span2 {
+  top: 12px;
+	transform-origin: center;
+	transform: rotate(0deg);
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+}
+
+#span3 {
+  top: 24px;
+	transform-origin: center;
+	transform: rotate(0deg);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
+}
+
+#span1.active1{
+	top: 12px;
+	
+	transform-origin: center;
+	transform: rotate(-45deg);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
+	background-color: #424242;
+	
+}
+#span2.active2{
+	height: 0px;
+	width: 0px;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+}
+#span3.active3{
+	top: 12px;
+	
+	transform-origin: center;
+	transform: rotate(45deg);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;background-color: #424242;
+	
+}
+	#menu{	
+		visibility: hidden;
+		transform-origin: center;
+		transform: scale(0);
+  		opacity: 0;
+		transition-timing-function: ease-out;
+		height: 100%;
+		width: 100%;
+	position: fixed;
+		
+		
+}
+
+
+
+
+#menu.activemenu{
+	
+	 visibility: visible;
+	transform-origin: center;
+	transform:scale(1);
+  opacity: 1;
+	  transition-duration: .5s;
+		transition-timing-function: ease-out;
+	z-index: 20;
+	background-color: rgba(255,255,255,0.9);
+
+	}
+	
+
+
+
+	#menu ul{
+		flex-direction: column;
+		margin: 0;
+		list-style: none;
+	
+		
+		padding: 0;
+	
+		font-family: 'raleway';
+		transform-origin: center;
+		padding-top: auto;
+		padding-bottom: auto;
+		position:absolute;
+	top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+#menu a, #menu p{
+	text-decoration: none;
+	text-align: center;
+	font-size: 40px;
+	color:#424242;
+	margin: 10px;
+	margin-bottom: 20px;
+	position: relative;
+
+	
+
+}
+
+
+
+.menu_ani a:before{
+	content: "";
+	position: relative;
+	transform-origin: center;
+	right: 0px;
+	border-left: 3px solid rgba(66,66,66,0);
+	transition-duration: 0.3s;
+}
+.menu_ani a:after{
+	content: "";
+	position: relative;
+	transform-origin: center;
+	left: 0px;
+	border-right: 3px solid rgba(66,66,66,0);
+	transition-duration: 0.3s;
+}
+
+.menu_ani a:hover:before{
+	border-left: 3px solid rgba(66,66,66,0);
+	right: 10px;
+}
+.menu_ani a:hover:after{
+	border-right: 3px solid rgba(66,66,66,1);
+	left: 10px;
+}
+
+/************Desktop Navigation***************/
+
+#desk_menu{
+	display: flex;
+	list-style: none;
+	position: fixed;
+	z-index: 50;
+	background-color: rgba(255,255,255,.8);
+	padding-top: 20px;
+	padding-bottom: 10px;
+	width: 100%;
+	margin: 0;
+justify-content:center;
+	align-items: center;
+	top: 0;
+}
+.logo{
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 150px;
+}
+
+#navi ul li a{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+	
+}
+
+
+#navi .navi_cta{
+	background-color: #F1B96F;
+	border-radius: 20px;
+	margin-left: 10px;
+	
+}
+
+#navi li{
+	
+	transition-duration: 1s;
+}
+
+#navi li:hover{
+
+	border-bottom-color: #2E5266;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	transition-duration: 1s;
+}
+
+/**********Startseiten Header**********/
+#titel p{
+	margin-top: -20px;
+}
+
+.fullcon{
+	height: 100%;
+	position: relative;
+}
+
+#hero .pfeil:after{
+	content: '';
+	width: 50px;
+	height: 50px;
+	border-right: solid 2px white;
+	border-bottom: solid 2px white;
+	position: absolute;
+			left: 50%;
+	top: 150%;
+	transform: translate(-50%,-50%) rotate(45deg);
+	transform-origin: center;
+	
+}
+
+.hero_call{
+	
+	position: absolute;
+			left: 50%;
+	top: 85%;
+	transform: translate(-50%,-50%);
+	transform-origin: center;
+}
+.hero_call a{
+	text-align: center;
+	color: white;
+}
+
+#hero{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.8) 100%), url("../bilder/hochzeitsfotograf_lahr_lukas_lehmann.jpg");
+		    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+#mob_title{
+	display: none;
+}
+
+
+/*****Mobiler Kontakt Button*********/
+.mob-contact-btn{
+	display: none;
+	  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+	background-color: #F1B96F;
+	text-align: center;
+	z-index: 100;
+}
+
+
+/************Portfolio Section ***************/
+
+.portcontainer{
+	
+	display: grid;
+	grid-gap: 0em;
+	grid-template-columns: 25% 25% 25% 25%;
+	
+}
+.panoimg{
+		grid-template-columns: 50% 50%;
+}
+
+.imgquote {
+	padding: 1em;
+	
+	
+	
+}
+
+.portcontainer img{
+	margin-top:0;
+	width: 100%;
+	
+
+}
+
+/*****************50 50 Grid*************/
+
+.grid_5050{
+	
+display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+
+}
+
+.grid_item{
+	align-items: center;
+   justify-content:center;
+	
+	display: flex;
+	flex-direction: column;
+	padding: 3%;
+	
+	padding-left: 20%;
+	padding-right: 20%
+	
+}
+.grid_item h3{
+	text-align:left;
+}
+.uebermich-text{
+	display: flex;
+	flex-direction: column;
+}
+
+.uebermich-text p{
+		font-size: 2em;
+	text-align: center;
+	}	
+
+
+
+.trennstrich:after{
+	content: '';
+	height: 60%;
+	position:absolute;
+	width: 2px;
+	background-color: #7C7C7C;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transform-origin: center;
+}
+
+.grid_item img{
+	width: 80%
+}
+.portrait-rund{
+	
+	
+	border-radius: 50%;
+width: 100px!important;
+	
+	
+	
+}
+
+/*******FORM Style**********/
+form input {
+	width: 90%;
+	
+}
+.form-group textarea{
+	width: 100%;
+}
+.form-group {
+	padding: 0;
+	margin: 0;
+	
+}
+.form-element{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.form-first-row{
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+	justify-content: space-between;
+	
+}
+label{
+  font-family: "Refomrma_1918";
+	text-align: left;
+}
+form .button{
+	  font-family: "Refomrma_1918";
+	font-size: 20px;
+}
+.form-row{
+	display: flex;
+	flex-direction: row;
+}
+
+
+/******Location Teaser********/
+
+
+.location-grid{
+
+	
+	
+		display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	position: relative;
+}
+
+.loc-box{
+	height: 400px;
+	padding: 40px;
+	margin: 40px;
+	opacity: 1;
+	transition: 0.3s;
+}
+
+.loc-box:hover{
+
+	height: 380px;
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
+.loc-content p{
+	text-align: right;
+	
+	bottom: 30px;
+right: 10px;
+	color: white;
+	position: relative;
+    transform: translate(10px, 350px);
+}
+
+.loc-title1{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.7) 100%), url("../bilder/location/hochzeit_henslerhof_Hinterzarten_title.jpg")!important;
+		    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+	
+}
+
+.loc-title2{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.7) 100%), url("../bilder/location/hochzeit_reinertonishof_schönwald_title.jpg")!important;
+		    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.loc-title3{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.7) 100%), url("../bilder/location/Europapark_Rust//heiraten_europapark_rust-14.jpg")!important;
+		    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+	
+}
+.loc-title4{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.7) 100%), url("../bilder/location/Klausenbauernhof_wolfach/heiraten_klausenbauernhof_wolfach-8.jpg")!important;
+		    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+	
+}
+
+
+
+/*****************Video-Teaser***********/
+.video-teaser{
+display: flex;
+	width: 80%;
+	height: 30%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin-top: 200px;
+	padding-bottom: 200px;
+	align-items: center;
+	justify-content: center;
+}
+.quote-box{
+	position: relative;
+  width: 30%;
+	padding: 30px;
+	background-color: rgb(241, 185, 111, 0.8);
+	transform: translate(70px, 50px);
+	z-index: 2;
+	
+}
+.highlight-container{
+	position: relative;
+  width: 70%;
+  padding-bottom: 40%; 
+  height: 0;
+
+
+	
+}
+
+.video-teaser iframe{
+	  
+  
+  position: absolute;
+  top:0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+/*******Startseite Bild + Quote******/
+.quote-start{
+	
+display: flex;
+	flex-direction: row;
+	position: relative;
+
+}
+
+.quote-start img{
+	position: relative;
+	top: -150px;
+	padding: 30px;
+	background-color: #2E5266;
+	left: 25%;
+	transform: translate(-50%);
+	
+	
+}
+
+.quote-start h3{
+	text-align: left;
+	font-size: 3em;
+	padding-left: 25%;
+	
+	top: 100px;
+	position: relative;
+	right: 10%;
+}
+.quote-start p{
+	text-align: left;
+	font-size: 2em;
+	padding-left: 25%;
+	
+	top: 100px;
+	position: relative;
+	right: 10%;
+}
+.quote-start h2{
+	text-align: left;
+	
+	padding-left: 25%;
+	
+	top: 100px;
+	position: relative;
+	right: 10%;
+}
+
+/***********BTS Video****************/
+.iframe-container{
+  position: relative;
+  width: 50%;
+  padding-bottom: 30%;
+
+  height: 0;
+left: 50%;
+	transform: translate(-50%);
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+	.iframe-container-porfolio{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  
+  height: 0;
+left: 50%;
+	transform: translate(-50%);
+		
+}
+
+
+/**********Preise und Pakete***********/
+.preise_text_box{
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	text-align: center;
+}
+.pakete_grid{
+	display: flex;
+	flex-direction: row;
+	width: 70%;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%)
+	
+}
+.pakete_grid h4{
+	text-align: center!important;
+	margin: 0;
+	padding: 10px;
+}
+.pakete_grid p{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.text-image-container{
+	position: relative;
+	text-align: center;
+}
+.paket_einzel{
+	width: 30%;
+	padding: 20px;
+	border: solid;
+	border-color: #f1b96f;
+	border-width: 1px;
+	
+}
+
+
+.bestseller{
+	background-color: #f1b96f;
+	top: 0;
+	position: absolute
+}
+.bestseller p{
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0!important;
+}
+
+.paket1, .paket3{
+	width: 25%;
+}
+
+.pakete_grid img{
+	max-width: 100%;
+  height: auto;
+}
+
+/***********FAQ************/
+
+
+
+
+.faq_fragen {
+	padding-left: 10%;
+	padding-right: 10%;
+	position: relative;
+	width: 80%;
+	
+}
+
+
+.faq_fragen h3{
+	text-align: left;
+	
+}
+
+.faq_container {
+    padding: 3em;
+	padding-top: 0;
+    display: grid;
+    grid-gap: 0em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  
+}
+    .faq_frage {
+        padding: 3em;
+       
+       
+}
+.strong-p{
+	font-family: "Reforma_1918_negra"
+}
+	  .faq_frage p{
+     text-align: center!important;
+     
+       
+}
+.faq_frage{
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.faq_border{
+	border-right: solid 2px #7C7C7C;
+	border-left: solid 2px #7C7C7C;
+}
+.italic{
+	 font-family: "Reforma_1918_italic";
+}
+
+/*************Footer**************/
+.footer {
+	text-align: center;
+}
+.footer .faq_container{
+	padding: 0;
+	background-color: #424242;
+}
+.footer a{
+	color:white;
+	
+}
+.footer .faq_frage{
+	padding: 1em;
+}
+
+
+/*Datenschutz*/
+#recht h1{
+	text-align: center;
+	padding-top:10%; 
+}
+
+#recht{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+/*********Testimonials*********/
+.container-4060{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	  justify-content: center;
+
+	align-items: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 20px;
+
+}
+.testi-item40{
+
+	width: 40%;
+	position: relative;
+	background-color: #2E5266;
+	padding: 30px;
+	
+}
+.testi-item40 img{
+	width: 100%;
+	height: 100%;
+	
+}
+.testi-item60{
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 60%;
+	position: relative;
+	
+	
+}
+
+.testi-name{
+	position: absolute;
+	font-family: "Reforma_1918_negra";
+	font-size: 2.5em;
+	top:-1%;
+	left: 30%;
+	z-index: 4;
+	color:#F1B96F;
+	background-color: #2E5266;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.testi-zeichen{
+	position: absolute;
+	opacity: 0.2;
+	width: 300px;
+	right: 10%;
+	top: 0;
+}
+/***********Cookie banner**************/
+.cookie-container{
+	display: none;
+	background-color:#F1B96F;
+	color: #424242;
+	width: 80%;
+	position: fixed;
+	bottom: 100px;
+	padding-left: 5%;
+	padding-right: 5%;
+	
+	transform: translate(50%, 0);
+	right: 50%;
+	z-index: 100;
+}
+
+.cookie-container a{
+	color: white;
+}
+
+.active{
+	display: block!important;
+}
+
+.btn-flex-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-anpassen {
+	color: white;
+	font-size: 20px;
+	text-decoration: underline white;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.btn-zustimmen {
+	background-color: #424242;
+	text-align: center;
+	color: white;
+	width: 200px;
+	font-size: 30px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+
+
+/*************Location Unterseiten***********/
+
+.location-text{
+	width: 70%;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%, 0);
+}
+
+.img-float-right{
+	float: right;
+	width: 50%;
+	margin-left: 10px;
+	padding: 20px;
+	padding-right: 0;
+}
+.img-float-left{
+	float: left;
+	width: 50%;
+	margin-right: 10px;
+	padding: 20px;
+	padding-left: 0;
+}
+
+.align-center-img{
+		left: 50%;
+	position: relative;
+	transform: translate(-50%, 0);
+	width: 80%;
+}
+
+.cta-location{
+	width: 50%; text-align: center; left: 50%; transform: translate(-50%,0); position: relative; margin-bottom: 100px;
+}
+
+
+
+/*********Hochzeit Ablauf ********/
+
+.weg-container{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: relative;
+}
+.weg-container p{
+	margin-top: -5px;
+	margin-bottom: 0;
+	
+}
+.weg-aufteilung{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	height: 200px;
+	position: relative;
+}
+.weg-text{
+	width: 48%; 
+}
+.weg-links{
+	text-align: right;
+}
+.weg-rechts{
+	text-align: left;
+}
+.kreis-strich-container{
+	width: 4%;
+	height: 100%;
+	display: flex;
+	
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.weg-kreis {
+	width: 20px;
+	height: 20px;
+	background-color: #424242;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 3;
+
+}
+.trennstrich-ablauf{
+	height: 100%;
+	width: 2px;
+	background-color: #424242;
+	position: absolute;
+	
+}
+.dicke-schrift{
+	font-family: "Reforma_1918_negra";
+}
+
+
+.weg-container-mob{
+	display: none;
+	flex-direction: column;
+	width: 90%;
+	position: relative;
+}
+
+.weg-aufteilung-mob{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	height: 300px;
+	position: relative;
+}
+.kreis-strich-container-mob{
+	width: 10%;
+	height: 100%;
+	display: flex;
+	
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+
+}
+.weg-text-mob{
+	width: 90%; 
+}
+
+.weg-kreis-mob {
+	width: 20px;
+	height: 20px;
+	background-color: #424242;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 3;
+
+}
+.trennstrich-ablauf-mob{
+	height: 100%;
+	width: 2px;
+	background-color: #424242;
+	position: absolute;
+	
+}
+.weg-container-mob p{
+	margin-top: -5px;
+	margin-bottom: 0;
+	
+}
+
+
+
+/**********Top 10 Locations*******/
+.top10-container{
+	position: relative;
+	width: 50%;
+	text-align: left;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.top10-container img{
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+}
+
+.top10-container h3{
+	text-align: left;
+	margin-bottom: 0;
+}
+
+
+.unterstrich:after{
+	content: '';
+	height: 1px;
+	position:absolute;
+	width: 100%;
+	background-color: #424242;
+	z-index: 1;
+	transform-origin: center;
+	
+	
+}
+
+
+/************Responsive***********/
+
+@media (max-width:1600px){
+	.quote-start img{
+	
+	top: -50px;
+	
+	left: 20%;
+	transform: translate(-50%);
+	
+	
+}
+.quote-start h3{
+	
+	font-size: 3em;
+	padding-left: 15%;
+	
+
+}
+	
+	.testi-name{
+		top: -50px;
+		
+	}
+	
+}
+
+
+@media (max-width:1400px){
+	
+	
+	.testi-name{
+		top: -50px;
+		font-size: 2em;
+	}
+	
+}
+
+@media (max-width:1211px){
+	#ham{
+		display: block;
+	}
+	
+	#menu a, #menu p{
+	text-align: center;
+	margin: 0px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	}
+	
+	#desk_menu{
+	display: none;
+	}
+
+	.video-item video{
+	width: 80%;
+	}
+
+	.location-grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+	}
+	
+	.video-teaser{
+	display: flex;
+	flex-direction: column-reverse;
+	}
+	
+	.quote-box{
+	position: relative;
+  	width: 50%;
+	transform: translate(0px, 10px)	
+	}
+	
+	.highlight-container{
+	position: relative;
+  	width: 70%;
+  	padding-bottom: 40%; 
+  	height: 0;	
+	}
+	
+	.quote-start img{
+	top: -50px;
+	left: 20%;
+	transform: translate(-50%);
+	height: 300px;
+	}
+	
+	.quote-start h3{
+	font-size: 2em;
+	padding-left: 15%;
+	}
+	
+	
+	.container-4060{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+
+	  justify-content: center;
+
+	align-items: center;
+	padding-left: 5%;
+	padding-right: 5%;
+
+}
+.testi-item40{
+
+	width: 40%;
+	position: relative;
+	background-color: #2E5266;
+	padding: 30px;
+	
+}
+.testi-item40 img{
+	width: 100%;
+	height: 100%;
+	
+}
+.testi-item60{
+	padding-left: 3%;
+	padding-right: 3%;
+	width: 60%;
+	position: relative;
+	
+	
+}
+	
+	
+}
+
+@media (max-width:1000px){
+	.img-float-left, .img-float-right{
+		left: 50%;
+	position: relative;
+	transform: translate(-50%, 0);
+	width: 80%;
+		float: none;
+		padding: 0;
+		margin: 0;
+	}
+
+
+}
+
+@media (max-width:968px){
+	
+	.footer .imp{
+		padding-bottom: 50px!important;
+	}
+	
+	.mob-contact-btn{
+		display: block;
+	}
+	
+	
+	
+	.desk_menu{
+		display: none;
+	}
+	
+	#mob_title{
+		display: block;
+		position: relative;
+		position: absolute;
+		
+		
+	}
+	#mob_title h3{
+		margin: 0;
+		padding-left: 10%;
+		padding-right: 10%;
+		font-size: 1em;
+    margin-top: 30px;
+		color: #424242;
+		
+	}
+	.unterseite_title h3{
+		color: white;
+		
+	}
+	h1{
+	position: absolute;
+	text-align: right;
+	width: 50%;
+	right: 10%;
+	bottom: 10%;
+	font-size: 2em;
+	
+}
+	
+	.h2-unterseite{
+		font-size: 1em;
+		margin-bottom: 50px;
+		margin-top: 50px;
+	}
+.h2_startseite{
+	text-align: right;
+	font-size: 2em!important;
+
+	position: absolute;
+	right: 10%;
+	top: 10%;
+	color: #F1B96F;
+	
+	
+}
+	.h1-unterseite{
+		width: 100%;
+		text-align: center;
+		left: 0;
+		transform: translate(0);
+		padding-bottom: 20px;
+		padding-top:20px; 
+	}
+	
+.portcontainer{
+	
+	grid-template-columns: 50% 50%;
+	
+}
+	.grid_5050{
+	
+
+	grid-template-columns: 100%;
+	
+
+}
+	.grid_item{
+		padding-top:5%;
+		padding-bottom: 5%;
+	}
+	
+	
+	
+	
+.trennstrich:after{
+	display: none;
+}
+	
+	.btn-container{
+	
+	width: 40%;
+	
+}
+.faq_border{
+	border-right: none;
+	border-left: none;
+}
+	
+	#navi{
+		display: none;
+	}
+	#titel h3{
+		text-align: center;
+		
+	}
+	#titel{
+		padding: 0;
+		
+	}
+	
+	
+	.loc-box{
+	
+	padding: 20px;
+	margin: 20px;
+	opacity: 1;
+	transition: 0.3s;
+}
+
+.loc-box:hover{
+margin: 15px;
+	
+	opacity: 0.8;
+	transition: 0.3s;
+}
+	
+	.pakete_grid{
+	display: flex;
+	flex-direction: column;
+		padding-left: 3%;
+	padding-right: 3%;
+	}
+	.preise_text_box{
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+	.paket_einzel{
+	width: 80%;
+		margin-top: 10px;
+	}
+	
+	.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+ 
+}
+	
+	.video-teaser{
+	display: flex;
+	flex-direction: column-reverse;
+	width: 90%;
+	}
+	
+	
+	.quote-box{
+	position: relative;
+  width: 80%;
+	transform: translate(0px, 10px)
+	
+}
+.highlight-container{
+	position: relative;
+  width: 100%;
+  padding-bottom: 55%; 
+  height: 0;
+
+
+	
+}
+	.container-4060{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	  justify-content: center;
+
+	align-items: center;
+	padding-left: 5%;
+	padding-right: 5%;
+
+}
+.testi-item40{
+
+	width: 100%;
+	position: relative;
+	background-color: #2E5266;
+	padding: 30px;
+	
+}
+.testi-item40 img{
+	width: 40%;
+	height: 40%;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%);
+	
+}
+.testi-item60{
+	padding-left: 3%;
+	padding-right: 3%;
+	width: 100%;
+	position: relative;
+	
+	
+}
+	.testi-name{
+		left: 50%;
+		transform: translate(-50%);
+		text-align: center;
+	}
+	
+	
+	.top10-container{
+	
+	width: 80%;
+	}
+}
+
+@media (max-width:900px){
+	
+	.weg-container{
+		width: 90%;
+	}
+	
+}
+
+
+@media (max-width:729px){
+	.dauer_cta{display: none;}
+	.h2_startseite {
+		font-size: 3em;
+		top: 20%;
+	}
+		
+	.quote-start img{
+	
+	top: 0px;
+	padding: 10px;
+	left: 2%;
+	transform: translate(0%);
+	height: 300px;
+	
+}
+.quote-start h3{
+	
+	font-size: 2em;
+	padding-left: 5%;
+	right: 2%;
+margin-bottom: 100px;
+}
+	.testi-zeichen{
+		display: none;
+	}
+		
+}
+
+
+@media (max-width:650px){
+	
+	.weg-container{
+		display: none!important;
+	}
+	.weg-container-mob{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: relative;
+}
+		.top10-container{
+	
+	width: 95%;
+	}
+}
+
+@media (max-width:600px){
+	.video-item video{
+	width: 95%;
+}
+	
+}
+
+
+@media (max-width:550px){
+	
+	.quote-start{
+	
+
+	flex-direction: column;
+	
+
+}
+	.quote-start img{
+		height: 300px;
+		width: 300px;
+		padding: 20px;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	
+	.quote-start h3{
+		text-align: center;
+		left: 0;
+		right: 0;
+		top: 0;
+		padding: 10px;
+	}
+	#unterseite_h1 h1{
+	
+	font-size: 1.5em;
+	
+}
+	
+	#hero{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.8) 100%), url("../bilder/hochzeitsfotograf_lahr_lukas_lehmann_mob.jpg");
+	}
+	
+	.hero_call a{
+	font-size: 15px;	
+		
+	}
+	
+	#hero .pfeil:after{
+	
+	width: 30px;
+	height: 30px;
+	}
+	
+	
+.h1_startseite{
+		bottom: 20%!important;
+	 font-size: 1em!important;
+	width: 95%;
+		
+	}
+.h2_startseite{
+	font-size: 1.5em;
+	top: 40%
+}
+	
+.portcontainer{
+	
+	grid-template-columns: 100%;
+	
+}
+	.faq_container {
+    padding: 1em;
+   
+  
+}
+    .faq_frage {
+        padding: 0em;
+     
+       
+}
+	
+
+	.grid_item{
+	
+	padding: 1em;
+	
+	padding-left: 1em;
+	padding-right: 1em;
+	
+}
+	.btn-container{
+	
+	width: 90%;
+	
+}
+
+	
+	.location-grid{
+
+	
+	
+		display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	position: relative;
+}
+	
+	.loc-box{
+	height: 200px;
+	padding: 20px;
+	margin: 20px;
+	opacity: 1;
+	transition: 0.3s;
+}
+
+.loc-box:hover{
+margin: 15px;
+	height: 180px;
+	opacity: 0.8;
+	transition: 0.3s;
+}
+	
+	
+.loc-content p{
+	text-align: right;
+	
+	bottom: 30px;
+right: 10px;
+	color: white;
+	position: relative;
+    transform: translate(10px, 150px);
+}
+	
+	.cookie-container a{
+	color: white;
+		font-size: 13px;
+}
+	.btn-anpassen {
+	color: white;
+	font-size: 13px;
+	text-decoration: underline white;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.btn-zustimmen {
+	background-color: #424242;
+	text-align: center;
+	color: white;
+	width: 200px;
+	font-size: 20px;
+	padding: 10px;
+}
+	.cookie-container p{
+		font-size: 13px;
+	}
+	
+	.testi-name{
+		width: 90%;
+	}
+	
+	
+
+}
+
+
+@media (max-width:499px){
+	.weg-aufteilung-mob{
+		height: 350px!important;
+	}
+}
+
+@media (max-width:380px){
+	.weg-aufteilung-mob{
+		height: 400px!important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
