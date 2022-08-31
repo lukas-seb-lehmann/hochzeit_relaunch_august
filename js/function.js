@@ -55,7 +55,7 @@ function starttracking(){
 }
 
 function startpixel(){
-	document.getElementsByClassName("meta-pixel").type='text/JavaScript';
+	document.getElementById("meta-pixel").type='text/JavaScript';
 }
 
 
