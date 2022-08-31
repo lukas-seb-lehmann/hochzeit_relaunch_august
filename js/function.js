@@ -48,13 +48,15 @@ function starttracking(){
 	
 	document.getElementById("google-maps-div").innerHTML ='<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84853.84459905875!2d7.754466!3d48.347405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90620af1a9d4fe36!2sLukas%20Lehmann%20-%20Hochzeitsfotograf%20Lahr%2FSchwarzwald!5e0!3m2!1sde!2sde!4v1645819832012!5m2!1sde!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
 	
-document.getElementsByClassName("meta-pixel")[0].type='text/JavaScript';
+
 
 	
 	
 }
 
-
+function startpixel(){
+	document.getElementsByClassName("meta-pixel").type='text/JavaScript';
+}
 
 
 
@@ -69,7 +71,8 @@ document.getElementsByClassName("meta-pixel")[0].type='text/JavaScript';
 	var containerelement = document.getElementById("container");
 	containerelement.classList.remove("active");
 	starttracking();
-	fbq('consent', 'grant');
+	startpixel();
+	
   }
  }
 
