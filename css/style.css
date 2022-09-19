@@ -1362,6 +1362,11 @@ left: 50%;
 }
 
 @media (max-width:1211px){
+	.quote-box{
+		margin-top: 150px;
+	}
+	
+	
 	#ham{
 		display: block;
 	}
