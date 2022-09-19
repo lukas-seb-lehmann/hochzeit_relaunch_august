@@ -30,7 +30,7 @@ body, html{
 	width: 50%;
 	z-index: 99;
 	left: 50%;
-	top: 50%;
+	top: 30%;
 	transform: translate( -50%);
 	display: flex;
 	flex-direction: column;
@@ -1470,7 +1470,10 @@ left: 50%;
 }
 
 @media (max-width:968px){
+	#dsgvodisclaimer{
 	
+	width: 80%;
+	}
 	.footer .imp{
 		padding-bottom: 50px!important;
 	}
@@ -1738,7 +1741,10 @@ margin-bottom: 100px;
 
 
 @media (max-width:650px){
+	#dsgvodisclaimer{
 	
+	width: 95%;
+	}
 	.weg-container{
 		display: none!important;
 	}
