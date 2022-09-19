@@ -185,8 +185,8 @@ fbq('track', 'PageView');
 	
 		
 			<div class="grid_item">
-				<div class="placeholderimg">
-				<img  src="bilder/Video-thumbs/lukas_lehmann_hochzeitsfotograf.jpg" alt="">
+				<div class="placeholderimg" >
+				<img onClick="showpopup()" src="bilder/Video-thumbs/lukas_lehmann_hochzeitsfotograf.jpg" alt="">
 				<p>Hier klicken um den Datenschutzbestimmungen/Tracking zuzustimmen und Inhalte von Youtube.com nachzuladen.</p>
 					<div class="btn-container btn-container-youtube">
 			
@@ -227,7 +227,22 @@ fbq('track', 'PageView');
 	</div>
 		
 	<div class="highlight-container">
-	<iframe src="https://www.youtube-nocookie.com/embed/tcQYyeWVyv4?vq=hd1080&modestbranding=1&rel=0" width="560" height="315" title="Hochzeitsfilm Kathalina & Fabian | Reinertonishof in Schönwald | Foto + Video" frameborder="0" allowfullscreen></iframe>
+				<div class="placeholderimg" >
+				<img onClick="showpopup()" src="bilder/Video-thumbs/hochzeit_kathalina_fabian_lukas_lehmann-456.jpg" alt="">
+				<p style="color: #424242">Hier klicken um den Datenschutzbestimmungen/Tracking zuzustimmen und Inhalte von Youtube.com nachzuladen.</p>
+					<div class="btn-container btn-container-youtube">
+			
+			<a class="button button-sec" onClick="funzustimmen()">Video laden</a>
+		</div>
+				
+				</div>
+		
+				<div  class="videoiframe iframe-container iframe-container-porfolio disable-img">
+		
+	
+		<iframe src="https://www.youtube-nocookie.com/embed/tcQYyeWVyv4?vq=hd1080&modestbranding=1&rel=0" width="560" height="315" title="Hochzeitsfilm Kathalina & Fabian | Reinertonishof in Schönwald | Foto + Video" frameborder="0" allowfullscreen></iframe>
+		</div>
+	
 	</div>
 	</div>
 	
@@ -380,9 +395,14 @@ fbq('track', 'PageView');
 	</footer>
 
 	
+	<div id="dsgvocontainer" class="dsgvocontainer ">
+	<div class="dsgvodisclaimer" id="dsgvodisclaimer">
+	<p>Um das Video abzuspielen musst du den <a href="https://lukas-hochzeitsfotograf.de/recht/datenschutz/" style="color: #2E5266">Datenschutzbestimmungen</a> zustimmen und Inhalte von Youtube.com nachladen.</p>
+	<p class="btn-zustimmen button-sec" onClick="funzustimmen()">Zustimmen</p>
+	<p class="button-prim" onClick="closepopup()">Video nicht abspielen</p>
 	
-	
-	
+	</div>
+	</div>
 	
 	
 	<div class="cookie-container active" id="container">

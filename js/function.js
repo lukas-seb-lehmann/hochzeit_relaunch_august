@@ -23,10 +23,21 @@ function removeplaceholder(){
 	
 }
 
+function videoladen(){
+	closepopup();
+	showvideo();
+	removeplaceholder();
+}
 
+function closepopup(){
 
+	
+	document.getElementById("dsgvocontainer").classList.remove("show-popup");
+}
 
-
+function showpopup(){
+	document.getElementById("dsgvocontainer").classList.add("show-popup");
+}
 
 
 
@@ -119,6 +130,7 @@ function starttracking(){
 	startpixel();
 	showvideo();
 	removeplaceholder();
+closepopup();
   }
  }
 
@@ -135,6 +147,7 @@ function funzustimmen(){
 	starttracking();
 showvideo();
 	  removeplaceholder();
+	closepopup();
 	
 }
 
