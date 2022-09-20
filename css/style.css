@@ -1322,6 +1322,104 @@ left: 50%;
 	
 }
 
+/*************DasDing Audio*********/
+
+.dasdingcontainer h3,.dasdingcontainer p{
+	text-align: left!important;
+	color: white;
+}
+.dasdingcontainer{
+	display: flex;
+}
+
+.dasdingaudiocontainer{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+@keyframes quiet {
+  25%{
+    transform: scaleY(.6);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes normal {
+  25%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(.6);
+  }
+}
+@keyframes loud {
+  25%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(1.2);
+  }
+}
+
+.boxContainer{
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  --boxSize: 8px;
+  --gutter: 4px;
+  width: calc((var(--boxSize) + var(--gutter)) * 5);
+margin: 15px;
+}
+
+.box{
+  transform: scaleY(.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: #F1B96F;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.box1{
+  animation-name: quiet;
+}
+
+.box2{
+  animation-name: normal;
+}
+
+.box3{
+  animation-name: quiet;
+}
+
+.box4{
+  animation-name: loud;
+}
+
+.box5{
+  animation-name: quiet;
+}
+
+
+
 
 /************Responsive***********/
 
