@@ -1384,7 +1384,7 @@ left: 50%;
   --boxSize: 8px;
   --gutter: 4px;
   width: calc((var(--boxSize) + var(--gutter)) * 5);
-margin: 15px;
+padding: 10px;
 }
 
 .box{
@@ -1805,7 +1805,9 @@ margin: 15px;
 }
 
 @media (max-width:900px){
-	
+	.boxContainer{
+		display: none;
+	}
 	.weg-container{
 		width: 90%;
 	}
