@@ -1,6 +1,306 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+/******Landing Page styling****/
+.landing-h1{
+	color: #424242;
+	margin: 0;
+	font-size: 4em;
+}
+
+
+
+.landing-hero{
+	display: flex;
+	flex-direction: row;
+	
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.6) 100%), url("../bilder/hochzeitsfotograf_lahr_lukas_lehmann.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+	width: 100%;
+}
+.landing-5050-container{
+	display: flex;
+	flex-direction: row;
+	
+	width: 100%;
+	align-content: center;
+	align-items: center;
+}
+.landing-left ul{
+	
+	
+	position: relative;
+
+
+}
+
+.landing-left ul li{
+	font-family: "Reforma_1918";
+	font-size: 25px;
+	list-style-image: url("../bilder/checkmark_icon.png");
+	margin-bottom: 10px;
+	width: 100%;
+	
+	
+}
+.landing-5050-container .landing-left, .landing-5050-container .landing-right{
+	padding-top: 0;
+	width: 50%;
+} 
+.landing-left{
+	display: flex;
+	width: 60%;
+	position: relative;
+	flex-direction: column;
+	
+	padding-top: 10%;
+	padding-left: 10%;
+	
+}
+.landing-right{
+	display: flex;
+	width: 40%;
+	position: relative;
+	flex-direction: column;
+	padding-top: 7%;
+	padding-right: 10%;
+}
+.landing-desk-desc{
+	padding-right: 25%;
+	
+}
+.landing-desk-desc {
+	font-size: 30px!important;
+}
+.landing-mob-desc{
+	
+	display: none;
+}
+.landing-cta-desk{
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+.landing-cta-desk a{
+	text-align: center; 
+	font-family: "Reforma_1918_negra";
+	font-size: 25px;
+}
+
+.landing-cta-desk a span{
+	font-family: "Reforma_1918";
+	font-size: 18px;
+}
+
+.cta-dicke-schrift{
+	
+}
+.google-bewertung img{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 0;
+	padding: 0;
+	height: 100px;
+	margin-top: 10px;
+}
+
+.grid2x1{
+	display: flex;
+	flex-grow: 2;
+	flex-direction: row;
+	position: relative;
+}
+.landing-testi-container{
+	position: relative;
+	display: flex;
+
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	margin-right: 20px;
+	margin-left: 20px;	
+	margin-top: 100px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 20px;
+}
+.landing-testi-container img{
+	width: 100px;
+	border-radius: 50px;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%);
+	top: -70px;
+	margin-bottom: -60px;
+}
+
+.landing-testis{
+
+	padding-left: 10%;
+	padding-right: 10%;
+	display: flex;
+	flex-direction: column;
+	
+}
+.landing-cta-mob{
+		display: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	left: 0;
+	
+	}
+.landing-mob-title{
+		
+		
+	display: none;
+}.landing-mob-title img{
+		left: 50%;
+	transform: translate(-50 0);
+		
+	
+}
+
+@media (max-width:1600px){
+	
+	.landing-h1{
+font-size: 3em;
+	
+}
+	@media (max-width:1200px){
+	
+	.video-teaser{
+		margin-top: 300px!important;
+	}
+	
+}
+	
+	
+}
+@media (max-width:1130px){
+	
+	.landing-h1{
+font-size: 2.5em;
+	
+}
+	.landing-desk-desc {
+	font-size: 20px!important;
+}
+.landing-left ul li{
+	
+	font-size: 18px;
+	
+	
+	
+}	
+	.landing-hero .landing-left{
+		padding-left: 5%;
+		width: 95%;
+	}
+}
+@media (max-width:987px){
+	.landing-h1{
+		margin-top: 0px!important;
+		width: 80%!important;
+		padding: 0!important;
+		position: relative!important;
+		text-align: left;
+		margin: 0;
+		font-size: 2em;
+		bottom: 0;
+		right: 0;
+	}
+	.landing-desk-desc{
+		display: none;
+	}
+	.landing-mob-desc{
+	
+	display: block;
+}
+	
+	.landing-hero{
+	padding: 2%;
+		width: 96%;
+	
+	flex-direction: column;
+	}
+	.landing-5050-container{
+		flex-direction: column;
+	}
+	.landing-left{
+	display: flex;
+	width: 100%;
+	position: relative;
+	flex-direction: column;
+	
+	padding-top: 0%;
+	padding-left: 0%;
+	
+}
+.landing-right{
+	display: flex;
+	width: 100%;
+	position: relative;
+	flex-direction: column;
+	padding-top: 7%;
+	padding-right: 0%;
+}
+	
+	.landing-cta-desk{
+		display: none;
+	}
+	.landing-cta-mob{
+		display: block;
+	}
+	
+	.landing-mob-title{
+		
+		display: block;
+	}
+	
+	.landing-5050-container .landing-left{
+		width: 100%;
+		padding: 0%;
+		margin: 0;
+		margin-right: 0!important;
+		justify-content: center;
+	}
+	
+	.landing-aufzaelung{
+		left: 20%;
+		position: relative;
+		width: 70%;
+		
+	}
+	.testi-mobi-dis{
+		display: none;
+	}
+	
+	.landing-testis{
+
+	padding-left: 2%;
+	padding-right: 2%;
+	
+	
+}
+	
+	.grid2x1{
+		flex-direction: column;
+	}
+}
+
+@media (max-width:620px){
+	.landing-aufzaelung{left: 10%;}
+}
+
+/********Allgemein styling***********/
+
 body, html{
 	padding: 0;
 	margin: 0;
